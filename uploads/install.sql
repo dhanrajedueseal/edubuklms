@@ -1198,21 +1198,21 @@ CREATE TABLE `payment_gateways` (
 --
 
 INSERT INTO `payment_gateways` (`id`, `identifier`, `currency`, `title`, `description`, `keys`, `model_name`, `enabled_test_mode`, `status`, `is_addon`, `created_at`, `updated_at`) VALUES
-(1, 'paypal', 'USD', 'Paypal', '', '{\"sandbox_client_id\":\"AfGaziKslex-scLAyYdDYXNFaz2aL5qGau-SbDgE_D2E80D3AFauLagP8e0kCq9au7W4IasmFbirUUYc\",\"sandbox_secret_key\":\"EMa5pCTuOpmHkhHaCGibGhVUcKg0yt5-C3CzJw-OWJCzaXXzTlyD17SICob_BkfM_0Nlk7TWnN42cbGz\",\"production_client_id\":\"1234\",\"production_secret_key\":\"12345\"}', 'Payment_model', 1, 1, 0, '', '1673263724'),
-(2, 'stripe', 'USD', 'Stripe', '', '{\"public_key\":\"pk_test_CAC3cB1mhgkJqXtypYBTGb4f\",\"secret_key\":\"sk_test_iatnshcHhQVRXdygXw3L2Pp2\",\"public_live_key\":\"pk_live_xxxxxxxxxxxxxxxxxxxxxxxx\",\"secret_live_key\":\"sk_live_xxxxxxxxxxxxxxxxxxxxxxxx\"}', 'Payment_model', 1, 1, 0, '', '1673263724'),
-(3, 'razorpay', 'INR', 'Razorpay', '', '{\"key_id\":\"rzp_test_J60bqBOi1z1aF5\",\"secret_key\":\"uk935K7p4j96UCJgHK8kAU4q\",\"theme_color\":\"#23d792\"}', 'Payment_model', 1, 1, 0, '', '1708580304'),
-(4, 'xendit', 'USD', 'Xendit', '', '{\"api_key\":\"xnd_development_44KVee2PG4HeeZxG69R5eXOJHVD7t84FZUIH8dMxa37ZU3bZ8KDKV9ugPfy5fRK\",\"secret_key\":\"your_xendit_secret_key\",\"other_parameter\":\"value\"}', 'Payment_model', 1, 1, 0, '', '1700647736'),
-(5, 'payu', 'PLN', 'Payu', '', '{\"pos_id\":\"PKf789971N2ig5hbF71y1BX46k\",\"second_key\":\"vaWDmIqbwiVUOVitXet9ZlC9mQ\",\"client_id\":\"PKf789971N2ig5hbF71y1BX46k\",\"client_secret\":\"vaWDmIqbwiVUOVitXet9ZlC9mQ\"}', 'Payment_model', 1, 1, 0, '', '1707980726'),
-(6, 'pagseguro', 'BRL', 'Pagseguro', '', '{\"api_key\":\"BAE981AF77CA4768A93849AFF5BF2331\",\"secret_key\":\"8045696DBFBF765FF4189FBAE1E02AB5\",\"other_parameter\":\"value\"}', 'Payment_model', 1, 1, 0, '', '1705559611'),
-(7, 'sslcommerz', 'USD', 'SSL Commerz', '', '{\"store_id\":\"sslcommerz_store_id\",\"store_password\":\"sslcommerz_store_password\"}', 'Payment_model', 1, 1, 0, '', '1673264610'),
-(8, 'skrill', 'USD', 'Skrill', '', '{\"skrill_merchant_email\":\"urwatech@gmail.com\",\"secret_passphrase\":\"your_skrill_secret_key\"}', 'Payment_model', 1, 1, 0, '', '1700647745'),
-(10, 'doku', 'USD', 'Doku', '', '{\"client_id\":\"BRN-0271-1700996849302\",\"shared_key\":\"SK-BxOS4PfUdIEMHLccyMI3\"}', 'Payment_model', 1, 1, 0, '', '1708603994'),
-(11, 'bkash', 'BDT', 'Bkash', '', '{\"app_key\":\"app-key\",\"app_secret\":\"app-secret\",\"username\":\"username\",\"password\":\"passwoed\"}', 'Payment_model', 1, 1, 0, '1700997440', '1701596645'),
-(12, 'cashfree', 'INR', 'CashFree', '', '{\"client_id\":\"TEST100748308df0665cabda6c2f38b903847001\",\"client_secret\":\"cfsk_ma_test_71065d7cadf8695e7845e86244bd7011_fff5714b\"}', 'Payment_model', 1, 1, 0, '1700997440', '1701688995'),
-(13, 'maxicash', 'USD', 'Maxicash', '', '{\"merchant_id\":\"TEST100748308df0665cabda6c2f38b903847001\",\"merchant_password\":\"cfsk_ma_test_71065d7cadf8695e7845e86244bd7011_fff5714b\"}', 'Payment_model', 1, 1, 0, '1700997440', '1701688995'),
-(14, 'aamarpay', 'BDT', 'Aamarpay', '', '{\"store_id\":\"aamarpaytest\",\"signature_key\":\"dbb74894e82415a2f7ff0ec3a97e4183\"}', 'Payment_model', 1, 1, 0, '1700997440', '1711366991'),
-(15, 'flutterwave', 'NGN', 'Flutterwave', '', '{\"public_key\":\"FLWPUBK_TEST-b6fbee21fd2d9f13be74bf4d87fe6197-X\",\"secret_key\":\"FLWSECK_TEST-70c3f071a83a1d14bb8a0061e53845a7-X\"}', 'Payment_model', 1, 1, 0, '1700997440', '1711366991'),
-(16, 'tazapay', 'USD', 'Tazapay', '', '{\"public_key\":\"pk_test_audpDpZGmHmYT46kmHvA\",\"api_key\":\"ak_test_CRXTUMNGV4MVPO7RDGT2\",\"api_secret\":\"sk_test_0OfyPSFUX4YqcQGkeyOWCVkEQ7WAWeZ6SmsNNpfFQ989qm15f8mu2gqmYhiXkZ87iF26Ej1Ex9pgNuTq9YoxksPmQjDEbyATBoWw0bNH12mQPIJQ4VGqEPIB5FEizarZ\"}', 'Payment_model', 1, 1, 0, '1700997440', '1711366991');
+(1, 'paypal', 'USD', 'Paypal', '', '{\"sandbox_client_id\":\"${PAYPAL_SANDBOX_CLIENT_ID}\",\"sandbox_secret_key\":\"${PAYPAL_SANDBOX_SECRET_KEY}\",\"production_client_id\":\"${PAYPAL_PRODUCTION_CLIENT_ID}\",\"production_secret_key\":\"${PAYPAL_PRODUCTION_SECRET_KEY}\"}', 'Payment_model', 1, 1, 0, '', '1673263724'),
+(2, 'stripe', 'USD', 'Stripe', '', '{\"public_key\":\"${STRIPE_PUBLIC_KEY}\",\"secret_key\":\"${STRIPE_SECRET_KEY}\",\"public_live_key\":\"${STRIPE_PUBLIC_LIVE_KEY}\",\"secret_live_key\":\"${STRIPE_SECRET_LIVE_KEY}\"}', 'Payment_model', 1, 1, 0, '', '1673263724'),
+(3, 'razorpay', 'INR', 'Razorpay', '', '{\"key_id\":\"${RAZORPAY_KEY_ID}\",\"secret_key\":\"${RAZORPAY_SECRET_KEY}\",\"theme_color\":\"#23d792\"}', 'Payment_model', 1, 1, 0, '', '1708580304'),
+(4, 'xendit', 'USD', 'Xendit', '', '{\"api_key\":\"${XENDIT_API_KEY}\",\"secret_key\":\"${XENDIT_SECRET_KEY}\",\"other_parameter\":\"value\"}', 'Payment_model', 1, 1, 0, '', '1700647736'),
+(5, 'payu', 'PLN', 'Payu', '', '{\"pos_id\":\"${PAYU_POS_ID}\",\"second_key\":\"${PAYU_SECOND_KEY}\",\"client_id\":\"${PAYU_CLIENT_ID}\",\"client_secret\":\"${PAYU_CLIENT_SECRET}\"}', 'Payment_model', 1, 1, 0, '', '1707980726'),
+(6, 'pagseguro', 'BRL', 'Pagseguro', '', '{\"api_key\":\"${PAGSEGURO_API_KEY}\",\"secret_key\":\"${PAGSEGURO_SECRET_KEY}\",\"other_parameter\":\"value\"}', 'Payment_model', 1, 1, 0, '', '1705559611'),
+(7, 'sslcommerz', 'USD', 'SSL Commerz', '', '{\"store_id\":\"${SSLCOMMERZ_STORE_ID}\",\"store_password\":\"${SSLCOMMERZ_STORE_PASSWORD}\"}', 'Payment_model', 1, 1, 0, '', '1673264610'),
+(8, 'skrill', 'USD', 'Skrill', '', '{\"skrill_merchant_email\":\"${SKRILL_MERCHANT_EMAIL}\",\"secret_passphrase\":\"${SKRILL_SECRET_PASSPHRASE}\"}', 'Payment_model', 1, 1, 0, '', '1700647745'),
+(10, 'doku', 'USD', 'Doku', '', '{\"client_id\":\"${DOKU_CLIENT_ID}\",\"shared_key\":\"${DOKU_SHARED_KEY}\"}', 'Payment_model', 1, 1, 0, '', '1708603994'),
+(11, 'bkash', 'BDT', 'Bkash', '', '{\"app_key\":\"${BKASH_APP_KEY}\",\"app_secret\":\"${BKASH_APP_SECRET}\",\"username\":\"${BKASH_USERNAME}\",\"password\":\"${BKASH_PASSWORD}\"}', 'Payment_model', 1, 1, 0, '1700997440', '1701596645'),
+(12, 'cashfree', 'INR', 'CashFree', '', '{\"client_id\":\"${CASHFREE_CLIENT_ID}\",\"client_secret\":\"${CASHFREE_CLIENT_SECRET}\"}', 'Payment_model', 1, 1, 0, '1700997440', '1701688995'),
+(13, 'maxicash', 'USD', 'Maxicash', '', '{\"merchant_id\":\"${MAXICASH_MERCHANT_ID}\",\"merchant_password\":\"${MAXICASH_MERCHANT_PASSWORD}\"}', 'Payment_model', 1, 1, 0, '1700997440', '1701688995'),
+(14, 'aamarpay', 'BDT', 'Aamarpay', '', '{\"store_id\":\"${AAMARPAY_STORE_ID}\",\"signature_key\":\"${AAMARPAY_SIGNATURE_KEY}\"}', 'Payment_model', 1, 1, 0, '1700997440', '1711366991'),
+(15, 'flutterwave', 'NGN', 'Flutterwave', '', '{\"public_key\":\"${FLUTTERWAVE_PUBLIC_KEY}\",\"secret_key\":\"${FLUTTERWAVE_SECRET_KEY}\"}', 'Payment_model', 1, 1, 0, '1700997440', '1711366991'),
+(16, 'tazapay', 'USD', 'Tazapay', '', '{\"public_key\":\"${TAZAPAY_PUBLIC_KEY}\",\"api_key\":\"${TAZAPAY_API_KEY}\",\"api_secret\":\"${TAZAPAY_API_SECRET}\"}', 'Payment_model', 1, 1, 0, '1700997440', '1711366991');
 
 -- --------------------------------------------------------
 
